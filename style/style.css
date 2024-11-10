@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex; /* Menggunakan Flexbox untuk body */
+    flex-direction: column; /* Mengatur arah flex menjadi kolom */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff1500; /* Warna latar belakang navbar */
+    padding: 10px 20px;
+    color: white;
+    width: 100%; /* Mengatur lebar navbar menjadi 100% */
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin: 0 15px;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.navbar-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Efek hover */
+}
+
+/* Hamburger Icon */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Menyesuaikan posisi menu */
+        left: 0;
+        background-color: #ff6161; /* Warna latar belakang menu */
+    }
+
+    .navbar-menu.active {
+        display: flex; /* Menampilkan menu saat aktif */
+    }
+
+    .navbar-toggle {
+        display: flex; /* Menampilkan ikon hamburger pada tampilan kecil */
+    }
+}
+
+/* Button Container */
+.button-container {
+    display: flex; /* Menggunakan Flexbox untuk tombol */
+    flex-direction: column; /* Mengatur tombol dalam kolom */
+    align-items: center; /* Mengatur tombol di tengah secara horizontal */
+    justify-content: center; /* Mengatur tombol di tengah secara vertikal */
+    height: 100vh; /* Mengatur tinggi button-container menjadi 100% dari tinggi viewport */
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px; /* Menambahkan border-radius untuk sudut tombol */
+    transition: background-color 0.3s, transform 0.2s; /* Menambahkan transisi untuk efek hover */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Efek hover pada tombol */
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
