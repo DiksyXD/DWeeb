@@ -26,8 +26,8 @@ moveButton.addEventListener('mousemove', (event) => {
     // Jika mouse mendekati tombol, gerakkan tombol menjauh
     const distance = Math.sqrt(dx * dx + dy * dy); // Menghitung jarak
     if (distance < 100) { // Jika jarak kurang dari 100 piksel
-        const moveX = (dx / distance) * 50; // Menghitung gerakan ke arah mouse
-        const moveY = (dy / distance) * 50; // Menghitung gerakan ke arah mouse
+        const moveX = (dx / distance) * 300; // Menghitung gerakan ke arah mouse
+        const moveY = (dy / distance) * 300; // Menghitung gerakan ke arah mouse
 
         moveButton.style.transform = `translate(${moveX}px, ${moveY}px)`; // Menggerakkan tombol
     }
